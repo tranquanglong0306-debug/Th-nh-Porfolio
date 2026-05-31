@@ -167,7 +167,7 @@ img { display: block; max-width: 100%; }
 .hero-body {
     position: relative; z-index: 10;
     padding: 0 40px; max-width: 600px;
-    margin-left: calc(50% - 600px + 40px);
+    margin-left: max(40px, calc(50% - 600px + 40px));
 }
 .hero-badge {
     display: inline-block;
@@ -240,6 +240,7 @@ img { display: block; max-width: 100%; }
     width: 38%; height: 38%;
     border-radius: 50%; overflow: visible;
     z-index: 10;
+    pointer-events: none;
 }
 .orbit-center > img {
     width: 100%; height: 100%;
@@ -267,6 +268,7 @@ img { display: block; max-width: 100%; }
     border: 2px solid var(--gold);
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     cursor: pointer;
+    z-index: 12;
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 .orbit-item img {
@@ -286,12 +288,12 @@ img { display: block; max-width: 100%; }
 }
 
 /* Vị trí 6 vòng quanh */
-.orbit-1 { top: 0%;    left: 38.5%; transform: translateX(-50%); }
-.orbit-2 { top: 13%;   right: 2%; }
-.orbit-3 { top: 57%;   right: 2%; }
-.orbit-4 { bottom: 0%; left: 38.5%; transform: translateX(-50%); }
-.orbit-5 { top: 57%;   left: 2%; }
-.orbit-6 { top: 13%;   left: 2%; }
+.orbit-1 { top: 0%;    left: 38.5%; }
+.orbit-2 { top: 19.25%; right: 5.16%; }
+.orbit-3 { top: 57.75%; right: 5.16%; }
+.orbit-4 { bottom: 0%; left: 38.5%; }
+.orbit-5 { top: 57.75%; left: 5.16%; }
+.orbit-6 { top: 19.25%; left: 5.16%; }
 
 /* Scroll indicator */
 .scroll-indicator {
