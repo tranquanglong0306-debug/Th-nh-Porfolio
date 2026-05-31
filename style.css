@@ -8,7 +8,7 @@
     --gold:      #D4AF37;
     --gold-light:#F0D060;
     --text:      #f0f0f0;
-    --text-muted:#b5b5b5;
+    --text-muted:#cccccc;
     --white:     #ffffff;
     --font-head: 'Cormorant Garamond', serif;
     --font-body: 'Inter', sans-serif;
@@ -651,8 +651,16 @@ img { display: block; max-width: 100%; }
     }
     .nav.open { right: 0; }
     .nav-list { flex-direction: column; gap: 30px; text-align: center; }
-    .nav-link { font-size: 1rem; }
+    .nav-link { font-size: 1rem; color: #ffffff; }
     .nav-overlay { display: block; }
+    .slide-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(14,14,14,0.6) 0%,
+            rgba(14,14,14,0.4) 60%,
+            rgba(14,14,14,0.15) 100%
+        );
+    }
 
     /* Hero */
     .hero { flex-direction: column; justify-content: flex-end; min-height: 100vh; }
@@ -694,4 +702,9 @@ img { display: block; max-width: 100%; }
     .hero-orbit { width: 240px; height: 240px; }
     .hero-actions { flex-direction: column; }
     .btn-gold, .btn-outline { text-align: center; justify-content: center; }
+    .qr-btn {
+        width: 48px; height: 48px;
+        bottom: 20px; right: 20px;
+        font-size: 1.2rem;
+    }
 }
