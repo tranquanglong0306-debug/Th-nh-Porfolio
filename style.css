@@ -230,7 +230,8 @@ img { display: block; max-width: 100%; }
 .hero-orbit {
     position: absolute; right: 5%; top: 50%;
     transform: translateY(-50%);
-    width: 420px; height: 420px;
+    width: clamp(280px, 38vh, 420px);
+    height: clamp(280px, 38vh, 420px);
     z-index: 10;
 }
 .orbit-center {
