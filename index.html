@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architect Portfolio | Minimalism</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Thêm Google Fonts để typography đẹp hơn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">ARCH.</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Trang chủ</a></li>
+                    <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                    <li><a href="#projects" class="nav-link">Dự án</a></li>
+                    <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Kiến tạo Không gian,<br>Nâng tầm Cuộc sống.</h1>
+                <p class="hero-subtitle">Thiết kế tối giản, tinh tế và bền vững.</p>
+                <a href="#projects" class="btn btn-primary">Xem Dự Án</a>
+            </div>
+            <div class="hero-orbit">
+                <!-- Avatar trung tâm -->
+                <div class="orbit-center">
+                    <!-- Tôi sử dụng tên file avatar.jpg, bạn hãy đổi tên ảnh của bạn thành avatar.jpg và để cùng thư mục -->
+                    <img src="avatar.jpg" alt="Kiến trúc sư" onerror="this.src='https://ui-avatars.com/api/?name=Architect&background=333&color=fff&size=200'">
+                </div>
+                <!-- Các dự án xung quanh từ hiluxhome.vn -->
+                <div class="orbit-item orbit-1" onclick="openProjectModal(0)"><img src="https://hiluxhome.vn/admin/img/gallery/89acb9e19e74e4c005f089d284a3b817.jpg" alt="Dự án 1"></div>
+                <div class="orbit-item orbit-2" onclick="openProjectModal(1)"><img src="https://hiluxhome.vn/admin/img/gallery/94ce77a86524e24697d9022253c41e45.jpg" alt="Dự án 2"></div>
+                <div class="orbit-item orbit-3" onclick="openProjectModal(2)"><img src="https://hiluxhome.vn/admin/img/gallery/2b767f114d38fd9566091607d6083719.jpg" alt="Dự án 3"></div>
+                <div class="orbit-item orbit-4" onclick="openProjectModal(3)"><img src="https://hiluxhome.vn/admin/img/gallery/37d85210c63922ed23734362d94e1196.jpg" alt="Dự án 4"></div>
+                <div class="orbit-item orbit-5" onclick="openProjectModal(4)"><img src="https://hiluxhome.vn/admin/img/gallery/e7ad20787443f91bec2792e166769557.jpg" alt="Dự án 5"></div>
+                <div class="orbit-item orbit-6" onclick="openProjectModal(5)"><img src="https://hiluxhome.vn/admin/img/gallery/76b95cff352ed781247756cd714ce6cc.jpg" alt="Dự án 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section class="about section" id="about">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2 class="section-title">Triết lý thiết kế</h2>
+                <p>Tôi tin vào nguyên tắc <strong>"Less but quality"</strong>. Mỗi đường nét, vật liệu và không gian đều được cân nhắc kỹ lưỡng để tạo ra sự cân bằng hoàn hảo giữa thẩm mỹ và công năng. Sự tinh tế và bền vững luôn là kim chỉ nam trong suốt hành trình sự nghiệp của tôi.</p>
+                <p>Hơn 10 năm kinh nghiệm trong lĩnh vực thiết kế kiến trúc, tôi đã đồng hành cùng hàng trăm khách hàng để biến những ý tưởng trên giấy thành những không gian sống đích thực.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Năm kinh nghiệm</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Dự án hoàn thành</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15</h3>
+                    <p>Giải thưởng</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Dự án nổi bật</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" onclick="openProjectModal(0)">
+                    <img src="https://hiluxhome.vn/admin/img/gallery/89acb9e19e74e4c005f089d284a3b817.jpg" alt="Biệt thự">
+                    <div class="project-info">
+                        <h3>Biệt thự HD-04</h3>
+                        <p>Nghỉ dưỡng</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card" onclick="openProjectModal(1)">
+                    <img src="https://hiluxhome.vn/admin/img/gallery/94ce77a86524e24697d9022253c41e45.jpg" alt="Nội thất">
+                    <div class="project-info">
+                        <h3>Biệt thự HD-05</h3>
+                        <p>Hiện đại</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card" onclick="openProjectModal(2)">
+                    <img src="https://hiluxhome.vn/admin/img/gallery/2b767f114d38fd9566091607d6083719.jpg" alt="Kiến trúc">
+                    <div class="project-info">
+                        <h3>Biệt thự TCĐ-02</h3>
+                        <p>Tân cổ điển</p>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card" onclick="openProjectModal(3)">
+                    <img src="https://hiluxhome.vn/admin/img/gallery/37d85210c63922ed23734362d94e1196.jpg" alt="Thiết kế">
+                    <div class="project-info">
+                        <h3>Villa TCĐ-03</h3>
+                        <p>Tân cổ điển</p>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card" onclick="openProjectModal(4)">
+                    <img src="https://hiluxhome.vn/admin/img/gallery/e7ad20787443f91bec2792e166769557.jpg" alt="Công trình">
+                    <div class="project-info">
+                        <h3>Villa TCĐ-04</h3>
+                        <p>Tân cổ điển</p>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="project-card" onclick="openProjectModal(5)">
+                    <img src="https://hiluxhome.vn/admin/img/gallery/76b95cff352ed781247756cd714ce6cc.jpg" alt="Văn phòng">
+                    <div class="project-info">
+                        <h3>Nhà phố NP-01</h3>
+                        <p>Hiện đại</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Mini -->
+    <section class="contact-mini section" id="contact">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Kết nối với Thành</h2>
+            <p style="color: var(--color-secondary); margin-bottom: 30px;">Đừng ngần ngại liên hệ nếu bạn có ý tưởng mới hoặc cần tư vấn chuyên sâu về không gian sống của bạn.</p>
+            <div class="social-links-mini">
+                <a href="tel:0962201686" class="contact-btn"><i class="fas fa-phone-alt"></i> 0962 201 686</a>
+                <a href="https://www.facebook.com/Hiluxhome.vn" target="_blank" class="contact-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Arch Designer. Thiết kế độc quyền.</p>
+        </div>
+    </footer>
+
+    <!-- QR Code Floating Button & Modal -->
+    <button class="qr-btn" id="qr-btn" aria-label="Hiện mã QR">
+        <i class="fas fa-qrcode"></i>
+    </button>
+
+    <div class="qr-modal" id="qr-modal">
+        <div class="qr-content">
+            <button class="close-btn" id="close-qr">&times;</button>
+            <h3>Quét để xem Website</h3>
+            <p style="margin-bottom: 20px;">Lưu lại hoặc mở Portfolio trên điện thoại</p>
+            <div style="font-size: 1.5rem; font-weight: 600; color: #D4AF37; margin-bottom: 15px;">
+                <i class="fas fa-phone-alt"></i> 0962 201 686
+            </div>
+            <!-- Ảnh mã QR trỏ đến website Portfolio -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://thanh-portfolio.vn/" alt="QR Code Portfolio Thành">
+            <a href="#" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Lưu mã QR</a>
+        </div>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div class="qr-modal" id="project-modal">
+        <div class="qr-content" style="max-width: 800px; width: 95%; text-align: left;">
+            <button class="close-btn" id="close-project">&times;</button>
+            <div id="project-modal-body">
+                <!-- Nội dung dự án sẽ được JS render ở đây -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>
